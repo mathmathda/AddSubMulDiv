@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>四則演算</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScriptの練習です">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <p>===HTMLだけで計算===</p>
+
+    <form oninput="op1.value = Number(a.value) + Number(b.value);">
+      <input type="number" name="a" value="0">
+      +
+      <input type="number" name="b" value="0">
+      =<output name="op1">0</output>
+    </form>
+    <br>
+
+    <p>===JavaScriptを使って計算：足し算のみ===</p>
+    <div id="app">
+      <input type="text" id="input1" value="">
+      <span>+</span>
+      <input type="text" id="input2" value="">
+      <span>=</span>
+      <input type="text" id="equals" value="0" readonly>     
+    </div>
+    
+    <p>===JavaScriptを使って計算：四則演算===</p>
+    <form>
+      First Number:<input type="text" id="firstNumber" value=""><br>
+      Second Number:<input type="text" id="secondNumber" value=""><br>
+
+      <button type="button" onclick="add()" value="">足す</button>
+      <button type="button" onclick="subtract()" value="">引く</button>
+      <button type="button" onclick="multiply()" value="">かける</button>
+      <button type="button" onclick="divide()" value="">割る</button>
+      <button type="button" onclick="mod()" value="">余り</button>
+    </form>
+    <p>答えは：<span id="result"></span></p>
+    
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+
+<!-- 質問
+valueをつけないとどうなるのか 
+nameとidは違うのか-->
